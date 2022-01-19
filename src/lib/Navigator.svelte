@@ -1,7 +1,7 @@
 <script>
     export let puzzleNumber;
 
-    import {goto} from "$app/navigation";
+    import { goto } from "$app/navigation";
 
     let input = "";
 
