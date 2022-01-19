@@ -40,6 +40,7 @@
 </script>
 
 <Puzzle puzzleNumber="3">
+    <p>Uh oh... the PNG seems to be invalid...</p>
     <input placeholder="Enter key" bind:value={key} on:input={generatePNG}>
     <div id="imgHolder">
         <img src={pngByteString} />
