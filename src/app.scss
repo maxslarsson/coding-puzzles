@@ -1,7 +1,5 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 * {
   background-color: rgb(40, 40, 40);
   color: white;
@@ -41,7 +39,7 @@ input, button {
   outline: none;
   border: none;
   background-color: white;
-  border-radius: 12px;
+  border-radius: $border-radius;
 }
 
 input {
