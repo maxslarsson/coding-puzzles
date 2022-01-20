@@ -30,12 +30,13 @@
   }
 
   button {
-    margin: 30px;
+    margin: 30px 70px;
   }
 
   div {
     width: 50%;
     margin: 0 auto;
+    padding: 0px 60px;
     border-radius: 20px;
     border: solid white;
   }
