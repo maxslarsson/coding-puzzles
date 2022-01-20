@@ -1,16 +1,13 @@
 import sys
 
-def main():
-    if len(sys.argv) != 2:
-        sys.stderr.write("Usage: ./create_ciphertext.py [PLAINTEXT]")
-        sys.exit(1)
+if len(sys.argv) != 2:
+    sys.stderr.write("Usage: ./create_ciphertext.py [PLAINTEXT]")
+    sys.exit(1)
 
-    for c in sys.argv[1] + "\n":
-        print(f"\{hex(ord(c) ^ 17)[2:]}", end="")
+for c in sys.argv[1] + "\n":
+    print(f"\{hex(ord(c) ^ 17)[2:]}", end="")
 
-    print()
+print()
 
-    print(f"The ciphertext is {len(sys.argv[1])+1} bytes long")
+print(f"The ciphertext is {len(sys.argv[1])+1} bytes long")
 
-if __name__ == "__main__":
-    main()
