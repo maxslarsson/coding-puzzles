@@ -7,7 +7,7 @@
     let fetchedBytes = [];
 
     onMount(async () => {
-        const res = await fetch(`/3/bytes`);
+        const res = await fetch(`/4/bytes`);
         const body = await res.text();
         fetchedBytes = Array.from(body.split(" "), x => parseInt(x));
     });
@@ -39,7 +39,7 @@
     }
 </script>
 
-<Puzzle puzzleNumber="3">
+<Puzzle puzzleNumber="4">
     <p>Uh oh... the PNG seems to be invalid...</p>
     <input placeholder="Enter key" bind:value={key} on:input={generatePNG}>
     <div id="imgHolder">

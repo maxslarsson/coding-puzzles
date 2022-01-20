@@ -100,7 +100,7 @@
     }
 </script>
 
-<Puzzle puzzleNumber="4">
+<Puzzle puzzleNumber="5">
     <div class='board'>
         <input
                 placeholder="What needs to be done?"
