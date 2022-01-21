@@ -11,9 +11,9 @@ const config = {
     target: "#svelte",
 
     vite: {
-      build: {
-        sourcemap: true
-      },
+      // build: {
+      //   sourcemap: true
+      // },
       css: {
         preprocessorOptions: {
           scss: {
