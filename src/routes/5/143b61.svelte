@@ -113,7 +113,6 @@
                 <div
                         class="card"
                         in:receive="{{key: todo.id}}"
-                        out:send="{{key: todo.id}}"
                         animate:flip="{{duration: 200}}"
                 >
                     <input type=checkbox on:change={() => mark(todo, true)}>
@@ -129,7 +128,6 @@
                 <div
                         class="card done"
                         in:receive="{{key: todo.id}}"
-                        out:send="{{key: todo.id}}"
                 >
                     <input type=checkbox checked on:change={() => mark(todo, false)}>
                     {todo.description}
