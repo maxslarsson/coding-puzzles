@@ -16,11 +16,16 @@
   position: absolute;
 }
 
-body, p {
-  margin: 2em;
+body {
+  margin: 0;
 }
 
+//body, p {
+//  margin: 2em;
+//}
+
 p {
+  margin: 2em;
   line-height: 1.5;
 }
 
