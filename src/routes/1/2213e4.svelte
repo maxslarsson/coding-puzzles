@@ -33,8 +33,6 @@
   input {
     width: 75%;
     margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
   }
 
   button {
