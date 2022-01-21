@@ -12,7 +12,7 @@
 
 <section>
     <form on:submit|preventDefault={visitPath}>
-        <input placeholder="Enter password" id={`passwordPuzzle${puzzleNumber}`} bind:value={input}>
+        <input placeholder="Enter password" id={`maxslarsson_password_puzzle_${puzzleNumber}`} bind:value={input}>
         <button type="submit">Submit</button>
     </form>
 </section>
