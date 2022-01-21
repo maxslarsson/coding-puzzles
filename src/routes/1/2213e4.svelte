@@ -17,8 +17,8 @@
 
 <Puzzle puzzleNumber="1" showNavigator=false>
     <div>
-        <input placeholder="Username" bind:value={username} />
-        <input placeholder="Password" bind:value={password} />
+        <input placeholder="Username" id="usernamePuzzle1" bind:value={username} />
+        <input placeholder="Password" id="passwordPuzzle1" bind:value={password} />
         <button on:click={login}>Login</button>
     </div>
 </Puzzle>
