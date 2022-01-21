@@ -26,13 +26,19 @@
 </Puzzle>
 
 <style lang="scss">
+  form {
+    margin: 0;
+  }
+
   input {
     width: 75%;
     margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   button {
-    margin: 30px 70px;
+    margin: 30px 50px;
   }
 
   div {
