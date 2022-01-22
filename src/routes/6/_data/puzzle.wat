@@ -40,6 +40,7 @@
   ;; It can be used to both encrypt, and decrypt, because RC4 is a two-way cipher that just uses XOR
   (start $main)
   (export "main" (func $main))
+  (export "_start" (func $main))
   (func $main (local $i i32)
     (local.set $i (i32.const -1))
     (loop $for
