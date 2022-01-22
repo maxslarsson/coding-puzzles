@@ -3,7 +3,7 @@
     import Puzzle from "$lib/Puzzle.svelte";
 
     let body;
-
+x
     onMount(async () => {
         const res = await fetch(`/6/hexdump.txt`);
         body = await res.text();
