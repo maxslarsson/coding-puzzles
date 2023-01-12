@@ -1,5 +1,4 @@
 <script>
-  import Link from "$lib/Link.svelte";
   import {base} from "$app/paths";
 </script>
 
