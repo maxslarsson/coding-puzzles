@@ -1,6 +1,7 @@
 <script>
     import Puzzle from "$lib/Puzzle.svelte";
     import {goto} from "$app/navigation";
+    import {base} from "$app/paths";
 
     let username, password;
 
@@ -8,7 +9,7 @@
         console.log(`Logging in with username "${username}" and password "${password}"`)
 
         if (username === "admin" && password.toLowerCase() === "4b32b2") {
-            goto(`/2/${password.toLowerCase()}`)
+            goto(`${base}/2/${password.toLowerCase()}`)
         } else {
             console.log("Incorrect username or password")
         }
@@ -25,7 +26,7 @@
     </div>
 </Puzzle>
 
-<style lang="scss">
+<style>
   form {
     margin: 0;
   }

@@ -1,12 +1,13 @@
 <script>
     export let puzzleNumber;
 
+    import { base } from "$app/paths";
     import { goto } from "$app/navigation";
 
     let input = "";
 
     function visitPath() {
-        goto(`/${parseInt(puzzleNumber)+1}/${input.toLowerCase()}`)
+        goto(`${base}/${parseInt(puzzleNumber)+1}/${input.toLowerCase()}`)
     }
 </script>
 

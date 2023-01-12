@@ -138,7 +138,7 @@
     </div>
 </Puzzle>
 
-<style lang="scss">
+<style>
     .board {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -168,7 +168,7 @@
         border: 1px solid hsl(240, 8%, 70%);
         background-color:hsl(240, 8%, 93%);
         color: #333;
-        border-radius: $border-radius;
+        border-radius: 12px;
     }
 
     input[type="checkbox"] {

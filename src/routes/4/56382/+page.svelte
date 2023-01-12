@@ -1,13 +1,14 @@
 <script>
     import Puzzle from "$lib/Puzzle.svelte";
     import { onMount } from 'svelte';
+    import {base} from "$app/paths";
 
     let key = "";
     let pngByteString = "data:image/png;base64,";
     let fetchedBytes = [];
 
     onMount(async () => {
-        const res = await fetch(`/4/bytes`);
+        const res = await fetch(`${base}/4/bytes`);
         const body = await res.text();
         fetchedBytes = Array.from(body.split(" "), x => parseInt(x));
     });
@@ -47,15 +48,16 @@
     </div>
 </Puzzle>
 
-<style lang="scss">
+<style>
     #imgHolder {
       width: 400px;
       margin: 0 auto;
       height: 150px;
-      img {
+    }
+
+    #imgHolder img {
         width: 100%;
         height: 100%;
-      }
     }
 
     input {

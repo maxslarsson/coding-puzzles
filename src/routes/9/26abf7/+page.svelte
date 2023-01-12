@@ -10,17 +10,18 @@
 <script>
     import {onMount} from "svelte";
     import {goto} from "$app/navigation";
+    import {base} from "$app/paths";
 
     let script = [
         "Happy birthdayyyy toooo youuuu",
         "Happy birthdayyyyyy toooooooo youuuuuu",
         "Happy birthdayyyyyy dearrrr Thomasssssss",
         "Happy birthdayyyyyy toooooooo youuuuuuuuuuu",
-        "/9/party.png",
+        `${base}/9/party.png`,
         "Yay you finished!",
         "Congrats!",
         "Here, have some gluten-free cake!",
-        "/9/cookies-and-cream-cake.jpeg",
+        `${base}/9/cookies-and-cream-cake.jpeg`,
         "I hope you enjoyed my little puzzle adventure thingy",
         "And I hope you struggled at least a little bit",
         "And maybe you even learned something new",
@@ -67,7 +68,7 @@
     {/if}
 </div>
 
-<style lang="scss">
+<style>
     div {
       width: 100vw;
       height: 100vh;
