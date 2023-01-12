@@ -15,6 +15,3 @@
         <Navigator puzzleNumber={puzzleNumber} />
     {/if}
 </section>
-
-<style lang="scss">
-</style>
