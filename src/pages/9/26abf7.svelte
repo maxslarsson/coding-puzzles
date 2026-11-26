@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import partyImage from '#lib/assets/9/party.png';
+	import cakeImage from '#lib/assets/9/cookies-and-cream-cake.jpeg';
 
-	let script = [
+	type Slide = string | { src: string; alt: string };
+
+	const script: Slide[] = [
 		'Happy birthdayyyy toooo youuuu',
 		'Happy birthdayyyyyy toooooooo youuuuuu',
 		'Happy birthdayyyyyy dearrrr Thomasssssss',
 		'Happy birthdayyyyyy toooooooo youuuuuuuuuuu',
-		`${import.meta.env.BASE_URL}9/party.png`,
+		{ src: partyImage, alt: 'Party' },
 		'Yay you finished!',
 		'Congrats!',
 		'Here, have some gluten-free cake!',
-		`${import.meta.env.BASE_URL}9/cookies-and-cream-cake.jpeg`,
+		{ src: cakeImage, alt: 'Cookies and cream cake' },
 		'I hope you enjoyed my little puzzle adventure thingy',
 		'And I hope you struggled at least a little bit',
 		'And maybe you even learned something new',
@@ -25,31 +29,28 @@
 		'And an amazing day!'
 	];
 
-	let delay = 1750;
-	let i = 0;
-	let showText = $state(false);
-	let contents = $state('');
+	let slide: Slide | undefined = $state();
 
 	onMount(() => {
-		let interval = setInterval(() => {
+		let i = 0;
+		const interval = setInterval(() => {
 			if (i >= script.length) {
 				clearInterval(interval);
 				window.location.href = 'https://bucketlistjourney.net/things-to-do-on-your-birthday/';
 				return;
 			}
 
-			contents = script[i];
-			showText = !contents.startsWith('/');
-			i++;
-		}, delay);
+			slide = script[i++];
+		}, 1750);
+		return () => clearInterval(interval);
 	});
 </script>
 
 <div>
-	{#if showText}
-		<h1>{contents}</h1>
-	{:else}
-		<img src={contents} />
+	{#if typeof slide === 'string'}
+		<h1>{slide}</h1>
+	{:else if slide}
+		<img src={slide.src} alt={slide.alt} />
 	{/if}
 </div>
 
