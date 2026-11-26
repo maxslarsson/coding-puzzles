@@ -11,6 +11,8 @@ pnpm install
 pnpm dev
 ```
 
+After editing anything in `puzzles/`, regenerate the committed puzzle assets with `nix run .#generate-puzzle-assets`.
+
 ## Building
 
 ```bash

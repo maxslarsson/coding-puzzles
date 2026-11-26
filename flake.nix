@@ -25,6 +25,24 @@
         );
     in
     {
+      packages = forEachSupportedSystem (pkgs: {
+        puzzle-4-bytes = pkgs.callPackage ./nix/puzzle-4-bytes.nix { };
+        puzzle-6-hexdump = pkgs.callPackage ./nix/puzzle-6-hexdump.nix { };
+        puzzle-7-spongebob = pkgs.callPackage ./nix/puzzle-7-spongebob.nix { };
+        puzzle-8-qr = pkgs.callPackage ./nix/puzzle-8-qr.nix { };
+        puzzle-8-wasm = pkgs.callPackage ./nix/puzzle-8-wasm.nix { };
+      });
+
+      apps = forEachSupportedSystem (pkgs: {
+        generate-puzzle-assets = {
+          type = "app";
+          program = pkgs.lib.getExe (
+            pkgs.callPackage ./nix/generate-puzzle-assets.nix self.packages.${pkgs.stdenv.hostPlatform.system}
+          );
+          meta.description = "Generate the puzzle assets into static/ and src/lib/assets/";
+        };
+      });
+
       devShells = forEachSupportedSystem (pkgs: {
         default = pkgs.mkShellNoCC {
           packages = with pkgs; [

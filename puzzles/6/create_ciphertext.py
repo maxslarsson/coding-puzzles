@@ -5,7 +5,7 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 for c in sys.argv[1] + "\n":
-    print(f"\{hex(ord(c) ^ 17)[2:]}", end="")
+    print(f"\\{hex(ord(c) ^ 17)[2:]}", end="")
 
 print()
 

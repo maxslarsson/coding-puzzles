@@ -1,4 +1,3 @@
 /static
 pnpm-lock.yaml
 flake.lock
-src/routes/*/_data
