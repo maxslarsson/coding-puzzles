@@ -1,10 +1,6 @@
-<script>
-	export let puzzleNumber;
+<script lang="ts">
+	let { puzzleNumber }: { puzzleNumber: number } = $props();
 </script>
-
-<svelte:head>
-	<title>Puzzle {puzzleNumber}</title>
-</svelte:head>
 
 <section>
 	<h1>Puzzle {puzzleNumber}</h1>
