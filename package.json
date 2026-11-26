@@ -15,6 +15,7 @@
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"check:isolation": "node scripts/check-isolation.js",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
