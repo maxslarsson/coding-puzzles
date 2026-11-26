@@ -19,7 +19,7 @@ After editing anything in `puzzles/`, regenerate the committed puzzle assets wit
 pnpm build
 ```
 
-Each page is its own Vite entry (`src/pages/<n>/<password>.html` with its component beside it), so a page only loads its own puzzle's code.
+Each page is its own Vite entry (`src/pages/<n>/<password>.html` with its component beside it), so a page only loads its own puzzle's code. Puzzle downloads include their own page's password in the filename, so they cannot be found just by guessing a puzzle number and a generic filename.
 
 A wrong password is just a missing page, which GitHub Pages answers with `404.html`. Locally, Vite shows a plain 404 instead; the error page itself is at `/coding-puzzles/404`.
 

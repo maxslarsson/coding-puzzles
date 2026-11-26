@@ -6,7 +6,7 @@
 	let fetchedBytes = $state.raw<number[]>([]);
 
 	onMount(async () => {
-		const res = await fetch(`${import.meta.env.BASE_URL}4/bytes`);
+		const res = await fetch(`${import.meta.env.BASE_URL}4/56382.bytes`);
 		const body = await res.text();
 		fetchedBytes = Array.from(body.split(' '), (x) => parseInt(x));
 	});

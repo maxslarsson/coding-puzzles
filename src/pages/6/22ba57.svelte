@@ -5,7 +5,7 @@
 	let body = $state('');
 
 	onMount(async () => {
-		const res = await fetch(`${import.meta.env.BASE_URL}6/hexdump.txt`);
+		const res = await fetch(`${import.meta.env.BASE_URL}6/22ba57.txt`);
 		body = await res.text();
 	});
 </script>
