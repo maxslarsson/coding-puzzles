@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	import { quintOut } from 'svelte/easing';
 	import { crossfade } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	import Puzzle from '#lib/Puzzle.svelte';
 
-	let key: CryptoKey;
+	// Awaited in add(), so pressing Enter before PBKDF2 finishes waits instead of failing
+	const key = deriveKey();
 
-	onMount(async () => {
+	async function deriveKey() {
 		const salt = new Uint8Array([1, 2, 3, 4, 5, 6, 10]);
 		let enc = new TextEncoder();
 
@@ -20,7 +19,7 @@
 			['deriveBits', 'deriveKey']
 		);
 
-		key = await window.crypto.subtle.deriveKey(
+		return window.crypto.subtle.deriveKey(
 			{
 				name: 'PBKDF2',
 				salt: salt,
@@ -32,7 +31,7 @@
 			true,
 			['encrypt', 'decrypt']
 		);
-	});
+	}
 
 	const [, receive] = crossfade({
 		duration: (d) => Math.sqrt(d * 200),
@@ -75,7 +74,7 @@
 				name: 'AES-GCM',
 				iv: iv
 			},
-			key,
+			await key,
 			ciphertext
 		);
 		const decoder = new TextDecoder('utf-8');

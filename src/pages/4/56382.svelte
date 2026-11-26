@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 
 	let pngByteString = $state('data:image/png;base64,');
-	let fetchedBytes: number[] = [];
+	let fetchedBytes = $state.raw<number[]>([]);
 
 	onMount(async () => {
 		const res = await fetch(`${import.meta.env.BASE_URL}4/bytes`);
@@ -39,7 +39,11 @@
 
 <Puzzle puzzleNumber={4}>
 	<p>Uh oh... the PNG seems to be invalid...</p>
-	<input placeholder="Enter key" oninput={(e) => generatePNG(e.currentTarget.value)} />
+	<input
+		placeholder="Enter key"
+		disabled={fetchedBytes.length === 0}
+		oninput={(e) => generatePNG(e.currentTarget.value)}
+	/>
 	<div id="imgHolder">
 		<img src={pngByteString} alt="" />
 	</div>
