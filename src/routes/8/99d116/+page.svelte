@@ -4,5 +4,5 @@
 </script>
 
 <Puzzle puzzleNumber="8">
-    <img src={qrImage} />
+    <img src={qrImage} alt="QR code" />
 </Puzzle>
