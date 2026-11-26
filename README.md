@@ -2,6 +2,10 @@
 
 🧩 A series of coding puzzles modeled after CTFs and similar puzzles
 
+I made this in January 2022, when I was really into CTFs, as a birthday present for a friend: a chain of nine puzzles, each one's solution unlocking the next.
+
+It's served from the `/coding-puzzles` subpath: [maxslarsson.github.io/coding-puzzles](https://maxslarsson.github.io/coding-puzzles/). `pnpm dev` and `pnpm preview` use the same subpath.
+
 ## Developing
 
 Enter the dev shell with `nix develop` (or let direnv do it via `use flake`), then:
