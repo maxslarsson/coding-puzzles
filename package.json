@@ -2,6 +2,10 @@
 	"name": "coding-puzzles",
 	"version": "0.0.1",
 	"private": true,
+	"packageManager": "pnpm@12.21.0",
+	"engines": {
+		"node": ">=26"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
