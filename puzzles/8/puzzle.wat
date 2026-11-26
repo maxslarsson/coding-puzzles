@@ -4,8 +4,8 @@
   ;; Import the required fd_write WASI function which will write the given io vectors to stdout
   ;; The function signature for fd_write is:
   ;; (File Descriptor, *iovs, iovs_len, nwritten) -> Returns number of bytes written
-  (import "wasi_unstable" "fd_write" (func $fd_write (type $t)))
-  (import "wasi_unstable" "fd_read" (func $fd_read (type $t)))
+  (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (type $t)))
+  (import "wasi_snapshot_preview1" "fd_read" (func $fd_read (type $t)))
 
   (memory 1)
   (export "memory" (memory 0))
