@@ -4,8 +4,6 @@
 
 I made this in January 2022, when I was really into CTFs, as a birthday present for a friend: a chain of nine puzzles, each one's solution unlocking the next.
 
-It's live at [puzzles.maxlarsson.dev](https://puzzles.maxlarsson.dev), served from the domain root as a Cloudflare Worker with static assets (`wrangler.jsonc`).
-
 ## Developing
 
 Enter the dev shell with `nix develop` (or let direnv do it via `use flake`), then:
