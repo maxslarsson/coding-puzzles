@@ -1,19 +1,22 @@
-<script>
-    export let puzzleNumber;
+<script lang="ts">
+	let { puzzleNumber }: { puzzleNumber: number } = $props();
 
-    import { base } from "$app/paths";
-    import { goto } from "$app/navigation";
+	let input = $state('');
 
-    let input = "";
-
-    function visitPath() {
-        goto(`${base}/${parseInt(puzzleNumber)+1}/${input.toLowerCase()}`)
-    }
+	function visitPath(event: SubmitEvent) {
+		event.preventDefault();
+		// A wrong guess is a missing page, so the host serves 404.html
+		window.location.href = `${import.meta.env.BASE_URL}${puzzleNumber + 1}/${input.toLowerCase()}`;
+	}
 </script>
 
 <section>
-    <form on:submit|preventDefault={visitPath}>
-        <input placeholder="Enter password" id={`maxslarsson_password_puzzle_${puzzleNumber}`} bind:value={input}>
-        <button type="submit">Submit</button>
-    </form>
+	<form onsubmit={visitPath}>
+		<input
+			placeholder="Enter password"
+			id={`maxslarsson_password_puzzle_${puzzleNumber}`}
+			bind:value={input}
+		/>
+		<button type="submit">Submit</button>
+	</form>
 </section>

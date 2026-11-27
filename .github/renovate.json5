@@ -1,0 +1,23 @@
+{
+	$schema: 'https://docs.renovatebot.com/renovate-schema.json',
+	extends: ['config:recommended'],
+	timezone: 'America/New_York',
+	minimumReleaseAge: '7 days',
+	// flake.lock is updated by hand: it pins the tools that generate the committed puzzle assets
+	nix: {
+		enabled: false
+	},
+	vulnerabilityAlerts: {
+		minimumReleaseAge: null
+	},
+	lockFileMaintenance: {
+		enabled: true,
+		automerge: true
+	},
+	packageRules: [
+		{
+			matchUpdateTypes: ['minor', 'patch', 'pin', 'digest'],
+			automerge: true
+		}
+	]
+}
