@@ -14,6 +14,8 @@ export default defineConfig({
 	build: {
 		outDir: '../../build',
 		emptyOutDir: true,
+		// Puzzles 2, 4 and 5 are solved by reading their code in devtools
+		minify: false,
 		rolldownOptions: {
 			// Each page is its own entry rather than a client-side route, so a page's bundle holds only
 			// its own puzzle (a router's route manifest would leak every password)
