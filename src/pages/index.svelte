@@ -12,7 +12,7 @@
 	</p>
 	<p>
 		Beware, many of these puzzles are designed to be vague and thus difficult as well. If you are
-		stuck on a problem for a long time, feel free to send me <a href="mailto:c23ml@dalton.org">
+		stuck on a problem for a long time, feel free to send me <a href="mailto:maxslarsson@gmail.com">
 			an email
 		</a> or talk to me in person.
 	</p>
