@@ -78,7 +78,7 @@ for (const page of files.filter((file) => file.endsWith('.html'))) {
 
 // Static hosting exposes unreferenced files too. Only public hints/metadata, password-named
 // pages/downloads, and hashed assets belong in the deployment. No manifests or source maps.
-const publicFiles = new Set(['index.html', '404.html', 'robots.txt', 'favicon.png', '.nojekyll']);
+const publicFiles = new Set(['index.html', '404.html', 'robots.txt', 'favicon.png']);
 const downloads = new Set(['4/56382.bytes', '6/22ba57.txt', '8/99d116.wasm']);
 const pages = new Set(segments.map((segment, i) => `${i + 1}/${segment}.html`));
 for (const file of files) {
