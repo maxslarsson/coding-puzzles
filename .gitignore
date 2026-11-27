@@ -7,3 +7,4 @@ vite.config.ts.timestamp-*
 .DS_Store
 .direnv
 result
+.wrangler

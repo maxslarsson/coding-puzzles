@@ -7,7 +7,6 @@ const root = resolve('src/pages');
 
 export default defineConfig({
 	root,
-	base: '/coding-puzzles/',
 	appType: 'mpa',
 	publicDir: '../../static',
 	plugins: [svelte()],
